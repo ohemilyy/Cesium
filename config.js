@@ -1,4 +1,4 @@
-exports.token = "NzMyNzc5Njc3MzYxNjM1NDMw.XxadNg.CFJlJDWXOjeJRmLqlIwSA2wfEJ4"
+exports.token = "gay"
 exports.owners = ["491134035863666708", "621948420143316994"];
 exports.prefix = "s!";
 exports.sencolor = "#ff2d2d";
