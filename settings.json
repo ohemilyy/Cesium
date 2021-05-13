@@ -2,16 +2,15 @@
   "Information": "This is the main configuration file.",
   "prefix": ";",
   "footer": "footer",
-  "modRoleID": "839293062793789471",
-  "adminRoleID": "839293059011444747",
-  "ownerID": "465613771943968768",
-  "adminID": "777653679506980875",
+  "modRoleID": "820862867582091314",
+  "adminRoleID": "820854928003825685",
+  "ownerID": "752373568393707540",
+  "adminID": "827883260084224030",
   "embedColor": "#ff8c00",
-  "botName": "MineRIP | Network",
-  "serverName": "MineRIP Network",
+  "botName": "Kyro | Network",
+  "serverName": "Kyro | AS",
   "serverStatus": "Development",
-  "serverAddress": "mine.rip",
-  "memberId": "839293081546915891",
-  "serverIcon": "https://media.istockphoto.com/vectors/chemistry-glass-bottle-filled-with-a-pink-liquid-potion-love-potion-vector-id664592044?k=6&m=664592044&s=170667a&w=0&h=208f2xG2TYAov6N9pBJHEaN_g5WlJvHzkvYKeqtDSAU="
+  "serverAddress": "kyro.rip",
+  "memberId": "820861378579398657",
+  "serverIcon": "https://cdn.discordapp.com/attachments/781317696159481879/841862408682471444/bigdogkyrologo.png"
 }
-

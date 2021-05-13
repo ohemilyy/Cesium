@@ -4,5 +4,4 @@ module.exports = (client, message) => {
     author: message.author,
     image: message.attachments.first() ? message.attachments.first().proxyURL : null
   })
-
 }

@@ -1,8 +1,3 @@
-exports.token = "gay"
-exports.owners = ["", ""];
-exports.sencolor = "#ff2d2d";
-exports.logo = "client.user.displayAvatarURL()";
-exports.version = "0.1";
-exports.developers = [""];
-exports.error = "<:error:732812802695102504> ";
-exports.yes = "<:yes:733961346370109440> ";
+exports.token = "ODQyMjI0NDU0MDAwMTgxMjY4.YJyMpQ.pnz-pfpkaDFfikutgJ78UTRiaXM"
+exports.owners = ["559497100296060939", "752373568393707540"]; //Owners Or Devs
+exports.prefix = ";";
