@@ -33,6 +33,11 @@ commands.run(client)
 const events = require("./structures/event");
 events.run(client)
 })
+client.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.cache.find(chnl => chnl.id === `839320081460494356`); //set welcome channel id here
+    channel.send(`:wave: Welcome to the Example Discord, ${member}`);
+});
+
 const Discord = require('discord.js')
 module.exports.run = async (client, message) => {
       const channel = client.channels.cache.get('726612345664569395');
