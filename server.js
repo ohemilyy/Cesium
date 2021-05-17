@@ -31,7 +31,7 @@ console.log("helloe")
 })
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(chnl => chnl.id === `798253468871295028`);
+  const channel = member.guild.channels.cache.find(chnl => chnl.id === `798253468871295028`);
   channel.send(`:wave: Welcome to the SolexGames Discord, ${member}`);
 });
 
