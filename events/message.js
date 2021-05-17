@@ -17,7 +17,7 @@ module.exports = async (client, message) => {
   if(levelInfo.xp >= levelInfo.level * 40) {
     levelInfo.level++;
     levelInfo.xp = 0;
-    message.reply(`You have leveled up! **${levelInfo.level}**`).then(m => m.delete(5000));
+    message.reply(`You have leveled up! **${levelInfo.level}**`);
   }
 
  await client.db.set(`level-${message.guild.id}-${message.author.id}`, levelInfo).catch()
