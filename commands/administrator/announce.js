@@ -25,7 +25,8 @@ exports.run = (bot, m, args) => {
 module.exports.help = {
   name: "announcement",
   description: "Sends an announcemen",
-  aliases: ["announcement", "announce", "alert"]
+  aliases: ["announcement", "announce", "alert"],
+  category: "administrator"
 }
 
 module.exports.requirements = {

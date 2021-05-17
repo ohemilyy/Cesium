@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { stripIndents } = require("common-tags");
 const { prefix, error } = require("../../config");
 module.exports.run = async (client, message, args) => {
-    const channel = client.channels.cache.get('726612345664569395');
+    const channel = client.channels.cache.get('775850229027045416');
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
     const reason = args.slice(1).join("  ")
     if(!member) {

@@ -28,7 +28,8 @@ exports.run = (bot, m, args) => {
 module.exports.help = {
   name: "changelog",
   description: "Dev Changelog",
-  aliases: ["devnote", "changes", "devannounce"]
+  aliases: ["devnote", "changes", "devannounce"],
+  category: "administrator"
 }
 
 module.exports.requirements = {

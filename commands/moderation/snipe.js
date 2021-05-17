@@ -7,7 +7,7 @@ module.exports.run = (client, message, args) => {
   
   const embed = new Discord.MessageEmbed()
  .setAuthor(`Deleted by ${msg.author.tag}`, msg.author.displayAvatarURL())
-  .setColor("RED")
+  .setColor("ORANGE")
   .setDescription(`CONTENT: \n${msg.content}`)
   
   

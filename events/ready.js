@@ -3,7 +3,8 @@ module.exports = (client) => {
    let statuses = [
         "demo.solexgames.com",
         "SolexGames",
-     "!help"
+        ";help",
+        "Like this bot contact Emily/Bunni!"
     ]
 
     setInterval(function() {

@@ -42,7 +42,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 module.exports.help = {
   name: "reload",
   description: "Reloads a command that\'s been modified.",
-  aliases: ["restart", "reboot", "asdasd"]
+  aliases: ["restart", "reboot", "asdasd"],
+  category: "administrator"
 }
 
 module.exports.requirements = {

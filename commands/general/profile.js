@@ -19,10 +19,10 @@ const flags = {
 };
 
 const status = {
-  online: "<:online:734309274997489686> `Online`",
-  idle: "<:idle:734309274875854949> `Idle/Afk`",
-  dnd: "<:dnd:734309274645430324> `Do Not Disturb`",
-  offline: "<:offline:734309275081506836> `Offline/Invisible`"
+  online: ":green_circle: `Online`",
+  idle: ":yellow_circle: `Idle/Afk`",
+  dnd: ":red_circle: `Do Not Disturb`",
+  offline: ":x: `Offline/Invisible`"
 }
 const device = {
   desktop: "Desktop",
@@ -66,7 +66,7 @@ module.exports.run = (client, message, args) => {
 		const userFlags = member.user.flags.toArray();
 		const embed = new MessageEmbed()
 			.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
-			.setColor(member.displayHexColor || 'BLUE')
+			.setColor(member.displayHexColor || 'ORANGE')
     .setTitle(`${member.user.username}'s Profile`)
 			// .addField('User', [
 			// 	`\`\`Username »\`\` ${member.user.username}`,
@@ -79,15 +79,15 @@ module.exports.run = (client, message, args) => {
 			// 	`**❯ Game:** ${member.user.presence.game || 'Not playing a game.'}`,
 			// 	`\u200b`
 			// ])
-    .addField("User<:tag:734309274754351115>", `\`\`\`js\n`
+    .addField("User:plus:", `\`\`\`js\n`
              + `${member.user.tag} \`\`\``, true)
-    .addField("User<:id:734309275090026556>", `\`\`\`js\n`
+    .addField("User ID", `\`\`\`js\n`
              + `${member.user.id}\`\`\``, true)
     .addField("Nickname", `\`\`\`js\n`
              + `${member.nickname !== null ? `Nickname: ${member.nickname}` : "None"} \`\`\``, true)
     .addField("\u200b", "\u200b")
     .addField("Bot", `\n`
-      + `${member.user.bot ? `<:bot:734314916718313502> \`True\`` : `<:user:734309274947289089> \`False\``}`, true)
+      + `${member.user.bot ? `:robot: \`True\`` : `:person_fencing: \`False\``}`, true)
     .addField("Status", `\n`
              + `${status[member.user.presence.status]}`, true)
     .addField("Device", `\n`

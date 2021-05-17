@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
   return message.channel.send(new MessageEmbed()
 .setAuthor(`Results for ${args[1]}`, message.guild.iconURL())
                               .setDescription(page.join("\n"))
-                              .setColor("BLUE")
+                              .setColor("ORANGE")
                              )
 }
 

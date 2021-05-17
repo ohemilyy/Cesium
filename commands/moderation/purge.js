@@ -2,7 +2,7 @@
  const ms = require("ms")
 const { stripIndents } = require("common-tags");
 module.exports.run = async (client, message, args) => {
-  const channel = client.channels.cache.get('726612345664569395');
+  const channel = client.channels.cache.get('775850229027045416');
 const amount = args.join(' '); // Amount of messages which should be deleted
 
 if (!amount) return message.reply('You haven\'t given an amount of messages which should be deleted!'); // Checks if the `amount` parameter is given

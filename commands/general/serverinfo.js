@@ -7,10 +7,10 @@ const { prefix } = require("../../config");
 exports.run = (client, message, args, level) => {// eslint-disable-line no-unused-vars
   message.delete();
   const embed = new Discord.MessageEmbed()
-  .setColor(`#ff8c00`)
-  .addField(`Owner`, `Dreamzy `, true)
+  .setColor(`#FF8C00`)
+  .addField(`Owner`, `GrowlyX `, true)
   .addField('Location', message.guild.region, true)
-  .addField('Server Name', `MineRIP`, true)
+  .addField('Server Name', `SolexGames`, true)
   .addField('Created', message.guild.createdAt.toLocaleString(), true)
   .addField('Roles', message.guild.roles.size, true)
   .setTimestamp()

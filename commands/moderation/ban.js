@@ -2,7 +2,7 @@
 const { stripIndents } = require("common-tags");
 const { prefix, error } = require("../../config");
 module.exports.run = async (client, message, args) => {
-  const channel = client.channels.cache.get('726612345664569395');
+  const channel = client.channels.cache.get('775850229027045416');
   const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
   const reason = args.slice(1).join("  ")
   if(!member) {
@@ -17,7 +17,6 @@ module.exports.run = async (client, message, args) => {
   if(!member.bannable) {
     return message.channel.send(error + "You cannot ban this user.")
   }
-  message.react("729518071806427178")
   message.author.send(`You banned ${member} for \`${reason}\``)
   member.send(`You got banned in \`${message.guild.name}\`, for the following reason  \`${reason}\` \n Banned by: \`${message.author.tag}\``)
   await member.ban(reason)

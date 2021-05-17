@@ -2,31 +2,31 @@
  const ms = require("ms")
 const { stripIndents } = require("common-tags");
 module.exports.run = async (client, message, args) => {
-  const channel = client.channels.cache.get('839319989102444554');
+  const channel = client.channels.cache.get('775850229027045416');
   const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
   // const reason = args.slice(2).join("  ")
   if(!member) {
-    return message.channel.send("<:error:838890846085447681> Please enter mention/id of a user to mute.")
+    return message.channel.send(":x: Please enter mention/id of a user to mute.")
   }
-var muterole = message.guild.roles.cache.get('722452016613425163');
-if(!muterole) return message.channel.send("<:error:838890846085447681> There is no mute role in this server.")
+var muterole = message.guild.roles.cache.get('843142032012869682');
+if(!muterole) return message.channel.send(":x: There is no mute role in this server.")
   
   var mutetime = args[1]
   
-  if(!mutetime) return message.channel.send("<:error:838890846085447681> How long are you going to mute this user?")
+  if(!mutetime) return message.channel.send(":x: How long are you going to mute this user?")
   
   await(member.roles.add(muterole.id))
-  message.channel.send(`<:checkmark:838891695931523122> ${member} is now muted for ${mutetime}`)
+  message.channel.send(`:white_check_mark: ${member} is now muted for ${mutetime}`)
   
   setTimeout(() => {
     member.roles.remove(muterole.id)
-    member.send("<:checkmark:838891695931523122> You have been unmuted!")
+    member.send(":white_check_mark: You have been unmuted!")
   }, ms(mutetime))
 }
 module.exports.help = {
   name: "mute",
   description: "mute a user",
-  aliases: ["m", "stupid", "tseriessuck"],
+  aliases: ["m", "shutup", "hush"],
   category: "moderation",
   usage: "mute <mention/id> <time> <reason>"
 }

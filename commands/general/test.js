@@ -5,7 +5,7 @@ const { prefix } = require("../../config");
 
 module.exports.run = async (client, message, args) => {
  const embed = new Discord.MessageEmbed()
- .setColor("BLUE")
+ .setColor("ORANGE")
  .setFooter(`${prefix}help`, client.user.displayAvatarURL)
  .setAuthor(`HELP | ${client.user.username}`, message.guild.iconURL)
  .setThumbnail(message.guild.iconURL)

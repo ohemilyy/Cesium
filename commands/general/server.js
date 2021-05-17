@@ -6,16 +6,16 @@ const { prefix } = require("../../config");
 
 exports.run = async (client, message, args) => {
     const embed = new d.MessageEmbed();
-    embed.setColor(`FFD700`)
+    embed.setColor(`ORANGE`)
     embed.setTitle(`Server`)
-    embed.setDescription(`IP: **mine.rip**\nStatus: Whitelisted`)
+    embed.setDescription(`IP: **demo.solexgames.com**\nStatus: Whitelisted`)
     message.channel.send({embed})
 };
 
 
 module.exports.help = {
   name: "ip",
-  description: "MineRIP Server Info",
+  description: "SolexGames Server Info",
   aliases: ["server", "connect", "address"],
   category: "general"
 }

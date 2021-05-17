@@ -32,7 +32,8 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
   name: "eval",
-  description: "eval command"
+  description: "eval command",
+  category: "administrator"
 }
 
 module.exports.requirements = {

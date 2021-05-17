@@ -36,7 +36,7 @@ exports.run = (bot, m, args) => {
     ];
 
     var result = Math.floor((Math.random() * sayings.length) + 0);
-    embed.setColor(`#ff8c00`)
+    embed.setColor(`#FF8C00`)
     embed.addField(':question: Question', msg)
     embed.addField(':8ball: 8Ball\'s Answer', sayings[result])
     m.channel.send({embed});

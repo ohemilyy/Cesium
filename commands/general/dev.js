@@ -6,7 +6,7 @@ const { prefix } = require("../../config");
 
 exports.run = async (client, message, args) => {
     const embed = new d.MessageEmbed();
-    embed.setColor(`#ff8c00`)
+    embed.setColor(`#FF8C00`)
     embed.setTitle(`Server Robot`)
     embed.setDescription(`This server is running **Cesium vBETA**
 
