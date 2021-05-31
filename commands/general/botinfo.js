@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const { sencolor, version, owners, developers } = require("../../config.js")
 const moment = require("moment")
 module.exports.run = (client, message, args) => {
-  require("moment-duration-format");
+require("moment-duration-format");
 const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
   let totalSeconds = (client.uptime / 1000);
 let days = Math.floor(totalSeconds / 86400);
@@ -14,16 +14,16 @@ let seconds = Math.floor(totalSeconds % 60);
    //code starts here
   var embed = new Discord.MessageEmbed()
   .setAuthor("Bot Information", client.user.displayAvatarURL())
-  .setColor(sencolor)
+  .setColor(`#FF8C00`)
   .setThumbnail(client.user.displayAvatarURL())
   .addField(`\:rotating_light: Uptime`, `Cesium has been spinning for ${duration}.`, true)
   //.addField("\:crossed_swords: Stats", "Number of times peopleran my commands: <number of commands ran> commands have been executed, as well as <how many were custom commands> custom commands")
   .addField("\:gear: Stats", `Working in ${client.guilds.cache.size} server, with a total ${client.users.cache.size} users.`, true)
   .addField("\u200B", "\u200B")
-  .addField("\:mega: Version", `Currently running Cesium version \`${version}\``, true)
+  .addField("\:mega: Version", `Currently running Cesium version 1.0.1`, true)
   .addField("\🇱", `Discord.js \n Node.js \n Javascript`, true)
   .addField("\u200B", "\u200B")
-  .addField(":wrench: Developers", `<@${owners[0]}>, <@${owners[1]}>, <@${developers[0]}>`)
+  .addField(":wrench: Developers", `ItzBunniYT`)
   .setFooter(`${client.user.username}`)
   console.log(`${duration}`)
   return message.channel.send(embed)

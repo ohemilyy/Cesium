@@ -98,7 +98,7 @@ module.exports.run = (client, message, args) => {
     .addField("Created at", `\`\`\`js\n`
              + `${moment(member.user.createdTimestamp).format('UTC |')} ${moment(member.user.createdTimestamp).format('LL LTS')} ${moment(member.user.createdTimestamp).fromNow()}\`\`\``)
     .addField("Activity ⚒️", `\`\`\`js\n`
-             + `${member.user.presence.game || 'Not playing a game.'} \`\`\``)
+             + `${member.GuildMember.presence.game} \`\`\``)
     .addField("Roles 🛡️", `\n`
              + `${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.client.utils.trimArray(roles) : 'None'}`)
 // .addField('Member', [

@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
   .setDescription(`Warnings for ${member}\n`
                 + `**${warnings}** \n`
                 + `Warned by <@${warner}>`)
-  .setColor(sencolor)
+ .setColor(`#FF8C00`)
   .setFooter(`${client.user.username} Warn Checker`)
   message.channel.send(warns)
 }
