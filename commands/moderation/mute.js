@@ -1,14 +1,15 @@
  const Discord = require("discord.js")
  const ms = require("ms")
 const { stripIndents } = require("common-tags");
+ let settings = require('../../settings.json')
 module.exports.run = async (client, message, args) => {
-  const channel = client.channels.cache.get('775850229027045416');
+  const channel = client.channels.cache.get(`${settings.loggingchannelID}`);
   const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
   // const reason = args.slice(2).join("  ")
   if(!member) {
     return message.channel.send(":x: Please enter mention/id of a user to mute.")
   }
-var muterole = message.guild.roles.cache.get('843142032012869682');
+var muterole = message.guild.roles.cache.get(`${settings.muteroleID}`);
 if(!muterole) return message.channel.send(":x: There is no mute role in this server.")
   
   var mutetime = args[1]

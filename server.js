@@ -2,6 +2,7 @@ const { token, prefix } = require("./config");
 const { Client, Collection } = require("discord.js");
 const { VultrexDB } = require("vultrex.db");
 const fs = require('fs');
+let settings = require('../../settings.json')
 const client = new Client({
   disableEveryone: true,
   disabledEvents: ["TYPING_START"]
@@ -27,23 +28,22 @@ commands.run(client)
 
 const events = require("./structures/event");
 events.run(client)
-console.log("Database Connected")
+console.log("helloe")
 })
-
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(chnl => chnl.id === `798253468871295028`);
+  const channel = member.guild.channels.cache.find(chnl => chnl.id === `${settings.welcomeID}`);
   channel.send(`:wave: Welcome to the SolexGames Discord, ${member}`);
 });
 
 const Discord = require('discord.js')
 module.exports.run = async (client, message) => {
-      const channel = client.channels.cache.get('830778673279533106');
+      const channel = client.channels.cache.get(`${settings.loggingchannelID}`);
 client.on("guildBanAdd", function(guild, user) {
   const log = new Discord.MessageEmbed()
   .setTitle("ACTION TRIGGERED | MEMBER BANNED")
-  .setColor("YELLOW")
+      .setColor("YELLOW")
       .setDescription(`*User has been banned in \`${guild.name}\`* \n\n • User Kicked : <@${user}> \n`)
-  .setTimestamp()
+      .setTimestamp()
   .setFooter("SolexGames Logs / This was recorded by the audit-log checker.")
   channel.send(log);
 });  

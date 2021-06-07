@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
-const functions = require("../../structures/functions");
+require("../../structures/functions");
 const db = require('quick.db')
- const { prefix, error, sencolor } = require("../../config");
 module.exports.run = async (client, message, args) => {
 //code starts here
     const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

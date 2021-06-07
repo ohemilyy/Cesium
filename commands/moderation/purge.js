@@ -1,8 +1,9 @@
  const Discord = require("discord.js")
  const ms = require("ms")
 const { stripIndents } = require("common-tags");
+ let settings = require('../../settings.json')
 module.exports.run = async (client, message, args) => {
-  const channel = client.channels.cache.get('775850229027045416');
+  const channel = client.channels.cache.get(`${settings.loggingchannelID}`);
 const amount = args.join(' '); // Amount of messages which should be deleted
 
 if (!amount) return message.reply('You haven\'t given an amount of messages which should be deleted!'); // Checks if the `amount` parameter is given
@@ -24,7 +25,7 @@ await message.channel.messages.fetch({ limit: amount }).then(messages => { // Fe
     + `• Command Executed By : <@${message.author.id}> \n`
     + `• Channel  : <#${message.channel.id}>`)
     .setTimestamp()
-    .setFooter("Arctic Logs")
+    .setFooter("SolexGames Logs")
     channel.send(log);
 }
 module.exports.help = {

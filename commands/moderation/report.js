@@ -1,6 +1,5 @@
 const { stripIndents } = require("common-tags");
 
-
 const Discord = require('discord.js');
 module.exports.run = (client, message, args) => {
 //code starts here
@@ -20,7 +19,7 @@ module.exports.run = (client, message, args) => {
         const channel = message.guild.channels.cache.find(c => c.name === "logs")
             
         if (!channel)
-            return message.channel.send("Couldn't find a `#reports` channel").then(m => m.delete(5000));
+            return message.channel.send("Couldn't find a `#logs` channel").then(m => m.delete(5000));
 
         const embed = new Discord.MessageEmbed()
             .setColor("#ff0000")

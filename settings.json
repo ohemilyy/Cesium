@@ -12,5 +12,8 @@
   "serverStatus": "Whitelisted",
   "serverAddress": "demo.solexgames.com",
   "memberId": "843142038769631244",
-  "serverIcon": "https://cdn.discordapp.com/attachments/781317696159481879/841862408682471444/bigdogkyrologo.png"
+  "serverIcon": "https://cdn.discordapp.com/attachments/781317696159481879/841862408682471444/bigdogkyrologo.png",
+  "welcomeID": "ty",
+  "loggingchannelID": "ty",
+  "muteroleID": "muteroleid"
 }
