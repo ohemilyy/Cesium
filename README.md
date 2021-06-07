@@ -1,6 +1,6 @@
 <small>
   <br/>
-  After a lot of outright theft, I leave this repo, but I will continue my work in private, but Luna obviously continues to evolve, so add her :b 
+ Cesium is a DiscordJS Bot that I worked on for SolexGames.
   <br/>
 </small>
 
