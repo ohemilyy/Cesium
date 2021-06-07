@@ -27,7 +27,7 @@ commands.run(client)
 
 const events = require("./structures/event");
 events.run(client)
-console.log("helloe")
+console.log("Database Connected")
 })
 
 client.on('guildMemberAdd', member => {
@@ -42,8 +42,7 @@ client.on("guildBanAdd", function(guild, user) {
   const log = new Discord.MessageEmbed()
   .setTitle("ACTION TRIGGERED | MEMBER BANNED")
   .setColor("YELLOW")
-      .setDescription(`*User has been banned in \`${guild.name}\`* \n\n`
-  + `• User Kicked : <@${user}> \n`)
+      .setDescription(`*User has been banned in \`${guild.name}\`* \n\n • User Kicked : <@${user}> \n`)
   .setTimestamp()
   .setFooter("SolexGames Logs / This was recorded by the audit-log checker.")
   channel.send(log);
