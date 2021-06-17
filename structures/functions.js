@@ -1,26 +1,26 @@
 module.exports = {
-  pages(arr, itemsPerPage, page = 1) {
-    const maxPages = Math.ceil(arr.length / itemsPerPage);
-    if (page < 1 || page > maxPages) return null;
-    return arr.slice((page - 1) * itemsPerPage, page * itemsPerPage)
-  },
+    pages(arr, itemsPerPage, page = 1) {
+      const maxPages = Math.ceil(arr.length / itemsPerPage);
+      if (page < 1 || page > maxPages) return null;
+      return arr.slice((page - 1) * itemsPerPage, page * itemsPerPage)
+    },
   
-      getMember: function(message, toFind = '') {
-        toFind = toFind.toLowerCase();
+    getMember: function(message, toFind = '') {
+        toFind = toFind.toLowerCase(); // Changes string to lowercase.
 
-        let target = message.guild.members.fetch(toFind);
+        let target = message.guild.members.fetch(toFind); // Tries fetching the member from the passed value.
         
-        if (!target && message.mentions.members)
+        if (!target && message.mentions.members) // If the target is null, and if they provided mentions for members set the new target to the first mentioned member.
             target = message.mentions.members.first();
 
-        if (!target && toFind) {
+        if (!target && toFind) { // If the target was null and we have a value to our query, try finding the member via the dispayName or try checking if they're tag includes the query.
             target = message.guild.members.find(member => {
                 return member.displayName.toLowerCase().includes(toFind) ||
                 member.user.tag.toLowerCase().includes(toFind)
             });
         }
             
-        if (!target) 
+        if (!target) // If the target is null again, just provide who ran the command.
             target = message.member;
             
         return target;
