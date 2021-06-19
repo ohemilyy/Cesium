@@ -16,6 +16,7 @@
     "path": "^0.12.7",
     "vultrex.db": "^1.4.1",
     "sqlite": "^4.0.10",
+    "moment-duration-format": "^2.3.2",
     "canvas": "^2.6.1",
     "common-tags": "^1.8.0",
     "vultrex.haste": "^1.0.1",
